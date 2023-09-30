@@ -1,5 +1,426 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body {
+  font-size: 16px;
+}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--background-color);
+}
+
+/* header */
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 100vh;
+  padding: 20px;
+  margin-block-end: 60px;
+  background-position: center ;
+}
+
+.header__decorator {
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.header__decorator > span {
+  content: "";
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  right: 30px;
+  align-items: center;
+  color: var(--main-title-color);
+  text-align: center;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138.889%;
+  top: 20px;
+}
+
+.header__decorator > span::after {
+  display: inline-block;
+  content: "";
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  background-color: var(--main-title-color);
+  filter: drop-shadow(0px 0px 4px var(--main-title-color));
+}
+
+.header__decorator::before {
+  content: "";
+  position: absolute;
+  color: var(--main-title-color);
+  block-size: 25px;
+  inline-size: 25px;
+  border-bottom: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+  bottom: 20px;
+  left: 20px;
+}
+
+.header__decorator::after {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+  top: 20px;
+  right: 20px;
+}
+
+.header__theme-menu {
+  justify-self: center;
+  align-self: start;
+  z-index: 1;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  padding: 3px 13px;
+  background-color: transparent;
+  border: transparent;
+  color: var(--main-title-color);
+  text-align: center;
+  font-family: var(--text-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--main-title-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: 0 1px 0 var(--main-title-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--main-title-color);
+}
+
+.header__title {
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0px var(--main-title-color);
+  font-family: IBM Plex Mono;
+  font-size: 157px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  margin-inline-start: -20px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+}
+
+.header__title-zero {
+  margin-inline-start: 0;
+}
+
+.header_paragraf {
+  display: inline-block;
+  justify-self: end;
+  align-self: center;
+  inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);;
+  /* inline-size: clamp(22.1875rem, 17.2761rem + 15.9553vw, 30.6875rem);; */
+  /* inline-size: clamp(min(100%, 355px), 47.92vw, 47.95vw); */
+  /* inline-size: clamp(min(100%, 355px), calc(22.75rem + 12.4vw), 30.69rem);  */
+  /*min(100%, min(364px,491px));*/
+  color: var(--text-color-decor);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+/* end header */
+/* why */
+
+.main-content {
+  padding: 0 20px;
+}
+
+.section__subtitle {
+  color: var(--text-color-decor);
+  font-family: var(--text-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin-block-end: 10px;
+}
+
+.title-decor {
+  background-color: var(--main-title-color);
+}
+
+.title-decor_normal {
+  font-weight: 400;
+}
+
+.why,
+.goldfish {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-block-end: 80px;
+}
+
+.section__title {
+  color: var(--main-title-color);
+  font-family: var(--text-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.section__paragraph {
+  color: var(--text-color);
+  font-family: var(--text-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  }
+
+.section__paragraph-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--main-title-color);
+}
+
+.section__paragraph-link:hover {
+  box-shadow: 0 1px 0 var(--text-color);
+}
+
+.section__paragraph-link:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.section__paragraph-link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.why__content .section__paragraph:not(:last-child),
+.goldfish__content .section__paragraph:not(:last-child),
+.goldfish__content .section__subtitle:first-child {
+    margin-block-end: 20px;
+}
+
+/* end why section */
+
+/* concentration */
+
+.concentration {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas:
+  "header . ."
+  "multitasking food gadgets";
+  margin-block-end: 80px;
+}
+
+.concentration__title {
+  grid-area: header;
+}
+
+.concentration__multitasking {
+  grid-area: multitasking;
+}
+
+.concentration__food {
+  grid-area: food;
+}
+
+.concentration__gadgets {
+  grid-area: gadgets;
+}
+/* end concentration section*/
+
+/* gallery */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-end: 60px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 19.76px;
+  grid-template-areas:
+  "sunset sunset icecream"
+  "tape books icecream"
+  "tape street street";
+}
+
+.images > img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.images-sunset {
+  grid-area: sunset;
+}
+
+.images-icecream {
+  grid-area: icecream;
+}
+
+.images-tape {
+  grid-area: tape;
+}
+
+.images-books {
+  grid-area: books;
+}
+
+.images-street {
+  grid-area: street;
+}
+
+.footer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+}
+
+.footer-shadow {
+  text-shadow: 2px 2px 0px var(--main-title-color);
+}
+
+@media (width <= 768px) {
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .header_paragraf {
+    inline-size: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);;
+  }
+
+  .why,
+  .goldfish {
+    gap: 20px;
+  }
+
+  .concentration {
+    grid-template-areas:
+    "header . ."
+    "multitasking multitasking multitasking"
+    "food food food"
+    "gadgets gadgets gadgets";
+  }
+
+  .images {
+    grid-template-columns: repeat(auto-fill, 229px);
+  }
+}
+
+@media (width <= 375px) {
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .header {
+    padding: 10px;
+    margin-block-end: 40px;
+  }
+
+  .header__decorator > span {
+    top: 10px;
+    right: 20px;
+  }
+
+  .header__decorator::after {
+    top: 10px;
+    right: 10px;
+  }
+
+  .header__decorator::before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-inline-start: 0;
+  }
+
+  /* end header */
+
+  /* why */
+  .why,
+  .goldfish,
+  .concentration {
+    grid-template-columns: 1fr;
+  }
+  /* end why */
+
+  .concentration {
+    grid-template-areas:
+    "header"
+    "multitasking"
+    "food"
+    "gadgets";
+  }
+
+  .concentration,
+  .why,
+  .goldfish
+   {
+    margin-block-end: 50px;
+  }
+
+  .gallery {
+    gap: 0;
+    margin-block-end: 40px;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas:
+    "sunset"
+    "icecream"
+    "tape"
+    "books"
+    "street";
+  }
 }
