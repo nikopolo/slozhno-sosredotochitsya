@@ -138,7 +138,7 @@
 .header_paragraf {
   justify-self: end;
   align-self: center;
-  inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);;
+  inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
   color: var(--text-color-decor);
   font-family: IBM Plex Mono;
   font-size: 18px;
@@ -245,11 +245,11 @@
   grid-area: multitasking;
 }
 
-.concentration__card:nth-of-type(2)  {
+.concentration__card:nth-of-type(2) {
   grid-area: food;
 }
 
-.concentration__card:nth-of-type(3)  {
+.concentration__card:nth-of-type(3) {
   grid-area: gadgets;
 }
 /* end concentration section*/
@@ -285,19 +285,19 @@
   grid-area: sunset;
 }
 
-.images-card:nth-of-type(2)  {
+.images-card:nth-of-type(2) {
   grid-area: icecream;
 }
 
-.images-card:nth-of-type(3)  {
+.images-card:nth-of-type(3) {
   grid-area: tape;
 }
 
-.images-card:nth-of-type(4)  {
+.images-card:nth-of-type(4) {
   grid-area: books;
 }
 
-.images-card:nth-of-type(5)  {
+.images-card:nth-of-type(5) {
   grid-area: street;
 }
 
