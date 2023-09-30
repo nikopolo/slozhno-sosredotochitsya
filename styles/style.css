@@ -397,9 +397,9 @@ body {
     "multitasking"
     "food"
     "gadgets";
+    margin-block-end: 50px;
   }
 
-  .concentration,
   .why,
   .goldfish {
     margin-block-end: 50px;
