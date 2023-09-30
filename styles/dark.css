@@ -11,10 +11,13 @@
   */
   --main-title-color: #FF0070;
   --text-color:#F1B2CE;
-  --text-font: 'IBM Plex mono', mono;
+  --text-font: 'IBM Plex mono', monospace;
   --text-color-decor: #000028;
   --header-title-color: #DB00FF;
   --background-color: #000028;
-  --background-image: url("/images/cover-image-dark.png");
+  --background-image: url("../images/cover-image-dark.png");
   --corner-color: #FF0070;
+  --title-hover: #ff007066;
+  --title-active: #FF0070;
+  --title-focus: #FF0070;
 }
