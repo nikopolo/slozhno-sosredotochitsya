@@ -1,5 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* Проверил через Pixel Perfect - всё сходится. Что ещё изменить - нет идей. Вроде проверил всё. */
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--background-image);
@@ -15,8 +17,8 @@
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
-  block-size: 100vh;
-  min-block-size: 668px;
+  block-size: 668px;
+  min-block-size: 100vh;
   padding: 20px;
   margin-block-end: 60px;
   background-position: center ;
@@ -302,8 +304,8 @@
 }
 
 .footer {
-  block-size: 100vh;
-  min-block-size: 668px;
+  block-size: 668px;
+  min-block-size: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

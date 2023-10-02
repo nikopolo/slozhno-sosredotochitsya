@@ -23,7 +23,7 @@
 }
   @media (prefers-color-scheme: light) {
     :root {
-      --main-title-color: #353430;
+      --main-title-color: #FF8DCB;
       --text-color:#353430;
       --text-font: 'IBM Plex mono', monospace;
       --text-color-decor: #353430;
@@ -41,3 +41,8 @@
     display: none;
   }
 
+@media (width >= 1024px) {
+  .header__title {
+    --main-title-color: #FF0070;;
+  }
+}
